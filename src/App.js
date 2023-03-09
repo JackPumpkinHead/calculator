@@ -1,6 +1,6 @@
 import './App.css';
-import {Box, Button, Text} from "@chakra-ui/react";
-import {useState} from "react";
+import {Box, Button, Text, Input, Flex} from "@chakra-ui/react";
+import { useState } from "react";
 
 
 function Numbers (props) {
@@ -48,7 +48,26 @@ function CountButton(props) {
     )
 }
 
+function InputCalc(props) {
+    const [result, setResult] = useState('');
 
+    function updateCounts (e) {
+
+    }
+
+    return (
+        <Flex w='100%' justifyContent='center'>
+            <Flex justifyContent='center'
+                  alignItems='center'
+                  border='2px'
+                  borderRadius='8px'
+                  borderColor='gray.50'
+            >
+                <Input border='transparent' type='text' onInput={(e) => {updateCounts(e)}}/>
+            </Flex>
+        </Flex>
+    )
+}
 
 function App() {
 
